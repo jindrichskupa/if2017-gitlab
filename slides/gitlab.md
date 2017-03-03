@@ -1,8 +1,6 @@
 # Gitlab + GitlabCI
-
-
+# ![40%](./images/gitlab-logo.png)
 ## InstallFest 2017
-
 Jindrich Skupa
 
 ---
