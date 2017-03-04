@@ -1,0 +1,27 @@
+before_script:
+  - php -v
+
+stages:
+  - build
+  - tests
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo $(date) > BUILD
+
+test:
+  stage: tests
+  script:
+  - php index.php
+
+deploy:
+  stage: deploy
+  script:
+    - ./deploy.sh
+  environment:
+    name: Production
+    url: http://35.157.108.195:8080
+  only:
+    - development
